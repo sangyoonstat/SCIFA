@@ -1,2 +1,3 @@
-# SCIFA (Sparse Compositional Integrative Factor Model for Multi-View Data with Compositions)
+# SCIFA 
 
+Description of files used for numerical studies and real data analysis in the paper "Sparse Compositional Integrative Factor Model for Multi-View Data with Compositions".
