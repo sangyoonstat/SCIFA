@@ -1,2 +1,2 @@
-# SCIFA
-Sparse Compositional Integrative Factor Model for Multi-View Data with Compositions
+# SCIFA (Sparse Compositional Integrative Factor Model for Multi-View Data with Compositions)
+
