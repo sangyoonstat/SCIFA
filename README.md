@@ -6,7 +6,7 @@
 
 **fit_rdat_github.R** - R code to apply SCIFA for the real data
 
-**all_rdat.RData** - file that includes real data we used. The original source can be found \url{https://github.com/bioFAM/MOFA2_tutorials/blob/master/R_tutorials/microbiome_vignette.html} and we saved and minimaly edited the original files to be consistent with our usage. 
+**all_rdat.RData** - file that includes real data we used. The original source can be found https://github.com/bioFAM/MOFA2_tutorials/blob/master/R_tutorials/microbiome_vignette.html and we saved and minimaly edited the original files to be consistent with our usage. 
 
 ## 2. Example with two clr-transformed views
 
