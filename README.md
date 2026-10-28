@@ -14,7 +14,7 @@
 ```{r}
 
 my_path <- "/Users/sayi/Library/CloudStorage/OneDrive-OklahomaAandMSystem/SCIFA-manuscript/" 
-source(paste(my_path, sep = "", "source_scifa.R")) # load the source code we have
+source(paste(my_path, sep = "", "final_source_scifa.R")) # load the source code we have
 
 num_clr <- 2 # the number of clr-transformed microbial views
 n = 100 # sample size
