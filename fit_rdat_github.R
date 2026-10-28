@@ -6,7 +6,7 @@ registerDoMC(cores = ncores - 1) # set the number of cores we are going to use f
 
 my_path <- "/Users/sayi/Library/CloudStorage/OneDrive-OklahomaAandMSystem/SCIFA-manuscript/" 
 
-source(file.path(my_path, "source_scifa.R")) # load the source code we have
+source(file.path(my_path, "final_source_scifa.R")) # load the source code we have
 load(file.path(my_path, "all_rdat.RData"))
 # all_rdat.RData file has the following objects:
 # 1. aux_df: data frame of auxiliary covariates
