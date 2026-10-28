@@ -53,16 +53,18 @@ require(doMC) # load this package for parallel computing
 ncores <- detectCores()
 registerDoMC(cores = ncores - 2) # set the number of cores we are going to use for parallel computing
 # fit SCIFA 
-scifa_out <- run_algo(dat$X_list, clr_indc, pvec, rhat_vec = NULL, nlamb = 80, c_min = 10^-5, c_max = 0.4,
-                      niter_free = 20, max_iter = 200, eps = 10^-5, center = T, seednum = seednum)
+scifa_out <- run_algo_final(dat$X_list, clr_indc, pvec, rhat_vec = NULL, nlamb = 80, c_min = 10^-5, c_max = 0.4,
+                            niter_free = 20, max_iter = 200, eps = 10^-5, center = T, seednum = seednum)
 
 # save the result
-scifa_res <- list("chosen_by_AIC" = scifa_out[[1]], "chosen_by_BIC" = scifa_out[[2]],
-                  "shat" = scifa_out[[3]], "mean_mat" = scifa_out[[4]], "rhat" = scifa_out[[5]])
+scifa_res <- list("chosen_by_AIC" = scifa_out$chosen_by_AIC, 
+                  "chosen_by_BIC" = scifa_out$chosen_by_BIC,
+                  "shat" = scifa_out$shat, "mean_mat" = scifa_out$mean_mat, 
+                  "rhat" = scifa_out$rhat_vec)
 
 # compute the estimate signal based on the BIC-type criterion
 # for 1st view
-s1_hat <- scifa_res$shat[1]
+s1_hat <- scifa_res$shat
 bic_M1 <- scifa_res$chosen_by_BIC$U0 %*% t(s1_hat*scifa_res$chosen_by_BIC$Vd[[1]]) + scifa_res$chosen_by_BIC$Ud[[1]] %*% t(s1_hat*scifa_res$chosen_by_BIC$Ad[[1]])
 sum((dat$M_list[[1]] - bic_M1)^2) / sum(dat$M_list[[1]]^2) # reconstruction error
 # for 2nd view
